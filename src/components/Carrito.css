@@ -1,0 +1,267 @@
+.carrito-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.carrito-container h2 {
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.carrito-vacio {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carrito-vacio p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.carrito-vacio button {
+  padding: 12px 24px;
+  background: #e31837;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carrito-vacio button:hover {
+  background: #c41530;
+}
+
+.items-lista {
+  margin-bottom: 30px;
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carrito-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-info h3 {
+  margin: 0 0 5px;
+  color: #333;
+  font-size: 16px;
+}
+
+.item-opcion {
+  color: #666;
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+.item-controles {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cantidad-controles {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cantidad-controles button {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #e31837;
+  background: white;
+  color: #e31837;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.cantidad-controles button:hover:not(:disabled) {
+  background: #e31837;
+  color: white;
+}
+
+.cantidad-controles button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cantidad-controles span {
+  font-weight: 600;
+  color: #333;
+  min-width: 20px;
+  text-align: center;
+}
+
+.btn-eliminar {
+  background: none;
+  border: none;
+  color: #e31837;
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+.btn-eliminar:hover {
+  color: #c41530;
+}
+
+.item-precio {
+  font-weight: 600;
+  color: #333;
+  min-width: 100px;
+  text-align: right;
+}
+
+.total-seccion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.total-monto {
+  font-size: 24px;
+  font-weight: 600;
+  color: #e31837;
+}
+
+.formulario-pedido {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-pedido h3 {
+  margin: 0 0 20px;
+  color: #333;
+}
+
+.form-grupo {
+  margin-bottom: 20px;
+}
+
+.form-grupo label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e6e6e6;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+  outline: none;
+  border-color: #e31837;
+  box-shadow: 0 0 0 2px rgba(227, 24, 55, 0.1);
+}
+
+.form-grupo input.error {
+  border-color: #e74c3c;
+}
+
+.error-mensaje {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
+.form-grupo textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.btn-enviar-pedido {
+  width: 100%;
+  padding: 15px;
+  background: #25D366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-enviar-pedido:hover {
+  background: #128C7E;
+}
+
+@media (max-width: 768px) {
+  .carrito-container {
+    padding: 10px;
+  }
+
+  .carrito-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carrito-item img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .item-controles {
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .item-precio {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .formulario-pedido {
+    padding: 20px;
+  }
+} 
